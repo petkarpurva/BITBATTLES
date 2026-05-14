@@ -1,46 +1,32 @@
 # BitBattles ⚔️
 
-**BitBattles** is a story-driven, gamified Python learning platform built as a Final Year BE Project. It transforms the experience of learning programming from a dry, academic exercise into an interactive, engaging mission.
+> A story-driven, gamified Python learning platform built as a Final Year BE Project.
 
-## ✨ Features
-- **Gamified Progression**: Earn XP, level up, and unlock new chapters as you learn.
-- **Interactive Quizzes**: Test your knowledge immediately with in-browser quizzes.
-- **Cinematic Story Mode**: Learn Python through a narrative-driven mission interface.
-- **Live Python Execution**: Write and execute Python code safely right in your browser.
-- **Secure Authentication**: Full JWT-based user session and progress tracking.
+[![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](#)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)](#)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)](#)
+[![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)](#)
 
-## 🛠️ Tech Stack
-- **Frontend**: React.js, Vite, Vanilla CSS (Glassmorphism UI)
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB, Mongoose
-- **Testing**: Jest, Supertest
-- **Code Execution**: Piston API integration
+## Overview
+BitBattles transforms learning Python from a standard academic exercise into an interactive mission. 
 
-## 🚀 Quick Start
+- **Gamified Learning**: Earn XP, level up, and unlock story chapters.
+- **Interactive Quizzes**: Test knowledge with immediate feedback.
+- **Live Compiler**: Write and execute Python safely in the browser via Piston API.
 
-### 1. Backend Setup
+## Quick Start
+
 ```bash
-# Make sure you are in the root directory
+# 1. Install Dependencies
 npm install
+cd frontend && npm install && cd ..
 
-# Create a .env file and add your MongoDB URI
+# 2. Environment Variables
+# Create a .env file in the root directory:
 # MONGO_URI=mongodb://localhost:27017/bitbattles
 # JWT_SECRET=your_secret_key
 
-# Start the backend server
-npm run dev
+# 3. Run Development Servers (Requires 2 terminals)
+npm run dev                  # Terminal 1: Backend
+cd frontend && npm run dev   # Terminal 2: Frontend
 ```
-
-### 2. Frontend Setup
-```bash
-# Open a new terminal and navigate to the frontend folder
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start the frontend server
-npm run dev
-```
-
-Visit `http://localhost:3000` to start your learning journey!
