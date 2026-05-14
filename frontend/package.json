@@ -1,0 +1,23 @@
+{
+  "name": "bitbattles-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "BitBattles Frontend - Gamified Python Learning Platform",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["python", "learning", "gamification"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.1.3",
+    "axios": "^1.13.4",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.0",
+    "vite": "^7.3.1"
+  }
+}

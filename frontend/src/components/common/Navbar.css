@@ -1,0 +1,111 @@
+.navbar {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-item:hover {
+  color: var(--text-primary);
+}
+
+.navbar-item.active {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-cyan);
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+.navbar-level {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent-purple);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+}
+
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 10px rgba(252, 165, 165, 0.5);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .navbar-menu {
+    gap: 0.5rem;
+  }
+  .navbar-item span {
+    display: none;
+  }
+}

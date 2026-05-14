@@ -1,0 +1,202 @@
+.chapter-view-container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background: radial-gradient(circle at top, #140b2e 0%, #080512 50%, #030107 100%);
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 1. Small Title */
+.chapter-header {
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 1.5rem;
+}
+
+.chapter-page-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #d8b4fe; /* soft purple */
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.4); /* subtle glow */
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+/* 2. Video Section */
+.video-section {
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+  margin-bottom: 2.5rem;
+  /* Soft neon border glow and subtle shadow */
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), inset 0 0 10px rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+/* Slight inner shadow for subtle depth */
+.video-section::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.main-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content Container */
+.content-section {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* 3. Summary Section (Glassmorphism) */
+.summary-section {
+  background: rgba(20, 11, 46, 0.4); /* dark purple transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.summary-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.summary-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.summary-list li {
+  margin-bottom: 0.5rem;
+}
+.summary-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* 4. Code Block */
+.code-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.code-container {
+  background-color: rgba(5, 3, 15, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.05); /* subtle blue glow */
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.lang-name {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.copy-btn:hover {
+  color: #38bdf8;
+}
+
+.code-block {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  color: #a8ffcc; 
+  overflow-x: auto;
+}
+
+.code-explanation {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #94a3b8;
+  font-style: italic;
+  padding-left: 0.5rem;
+}
+
+/* 5. CTA Button */
+.action-section {
+  margin-top: 1rem;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  display: inline-flex;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.start-btn:hover {
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5), 0 0 15px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.not-found {
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

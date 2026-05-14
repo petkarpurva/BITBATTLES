@@ -1,0 +1,157 @@
+.compiler-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.compiler-header {
+  margin-bottom: 20px;
+}
+
+.compiler-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--accent-cyan);
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.compiler-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Grid Layout container */
+.compiler-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1.5rem;
+  height: 500px;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+/* Cards setup */
+.editor-card,
+.output-card {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem !important;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass);
+  overflow: hidden;
+}
+
+/* Top bars inside editor/output */
+.editor-header,
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-glass);
+  flex-shrink: 0;
+}
+
+.editor-label,
+.output-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Code Editor Textarea */
+.code-editor {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 3, 15, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-code);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.code-editor:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Output Area */
+.output-content {
+  flex: 1;
+  background: rgba(5, 3, 15, 0.8);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.output-text {
+  color: var(--accent-green);
+  font-family: var(--font-code);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.output-error {
+  color: var(--accent-red);
+  font-family: var(--font-code);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.output-loading,
+.output-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 3rem 1rem;
+  align-self: center;
+  font-family: var(--font-body);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .compiler-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .editor-card {
+    height: 450px;
+  }
+
+  .output-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compiler-page {
+    padding: 1rem;
+  }
+}

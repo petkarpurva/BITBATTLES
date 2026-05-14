@@ -1,0 +1,244 @@
+.dashboard-page {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.title-gradient {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-glass);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-neon-subtle);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: var(--accent-purple);
+  text-shadow: 0 0 10px rgba(216, 180, 254, 0.4);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Progress Section */
+.progress-section {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-glass);
+}
+
+.progress-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progress-level {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent-cyan);
+}
+
+.progress-xp {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Chapters Section */
+.chapters-section {
+  margin-top: 3rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.chapter-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  box-shadow: var(--shadow-glass);
+}
+
+.chapter-card:not(.locked):hover {
+  transform: translateY(-4px);
+  border-color: var(--border-neon-subtle);
+}
+
+.chapter-card.completed {
+  border-color: rgba(168, 255, 204, 0.3); /* green tint for completed */
+}
+
+.chapter-card.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  justify-content: center;
+  align-items: center;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.chapter-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(168, 85, 247, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.chapter-content {
+  flex: 1;
+}
+
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.chapter-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.chapter-check {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+.chapter-number {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.chapter-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.chapter-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chapter-difficulty {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  background: rgba(5, 3, 15, 0.5);
+  border-radius: 0.5rem;
+  color: var(--text-muted);
+}
+
+.chapter-locked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: var(--text-muted);
+}
+
+.locked-text {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 1rem;
+  }
+  .dashboard-title {
+    font-size: 2rem;
+  }
+  .stats-grid, .chapters-grid {
+    grid-template-columns: 1fr;
+  }
+}

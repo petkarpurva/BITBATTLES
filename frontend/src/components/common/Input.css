@@ -1,0 +1,45 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-glass-input);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.input-error {
+  border-color: var(--accent-red);
+}
+
+.input-error:focus {
+  box-shadow: 0 0 10px rgba(252, 165, 165, 0.2);
+}
+
+.input-error-text {
+  font-size: 0.85rem;
+  color: var(--accent-red);
+}
